@@ -103,7 +103,7 @@ public class Orquestador {
 	//		->MANDA A LLAMAR A MI CLASE OBJETO 
 	
 	public void invocador() {
-		//cadena="abaa aab aaanbbb";  //xAx
+		//cadena="abaa aab aaanbbb";  //xAx   //hey
 		cadena="xaccx";
 		reemplazo="w";
 		//ER="aaba*+bbb*";
