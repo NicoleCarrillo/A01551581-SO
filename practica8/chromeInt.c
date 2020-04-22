@@ -6,7 +6,7 @@
 #include <sys/wait.h>
 
 int main(){
-    //400 POR EL TAMANIO DE LOS ENTEROS 1 INT = 4
+    //400 POR EL TAMANIO DE LOS ENTEROS 1 INT = 4bytes
     int shmId=shmget(29,400,0644|IPC_CREAT);  //este lo ejecuta el proceso padre, es el que crea el proceso de memoria
     int hijos[5];
     for(int i=0;i<5;i++){
@@ -26,7 +26,7 @@ int main(){
         waitpid(hijos[i],0,0);
     }
     int *var=(int *)shmat(shmId,NULL,0);
-    for(int x=0;x<50;x++){
+    for(int x=0;x<100;x++){
          printf("%d",var[x]);
     }
 
